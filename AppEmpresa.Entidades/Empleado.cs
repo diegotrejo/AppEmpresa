@@ -16,10 +16,10 @@ namespace AppEmpresa.Entidades
         public double Salario { get; set;}
         public double? Comision { get;}
 
-        public string IdCargo {  get; set;}  //FK
+        public int CargoId {  get; set;}  //FK
         public Cargo? Cargo { get; set;}
 
-        public int IdDepartamento { get; set; }  // FK
+        public int DepartamentoId { get; set; }  // FK
         public Departamento? Departamento { get; set; }
 
 

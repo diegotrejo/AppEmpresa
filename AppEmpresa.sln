@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppEmpresa.Entidades", "AppEmpresa.Entidades\AppEmpresa.Entidades.csproj", "{246DA93A-534F-4645-9917-4837B6ADC9B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppEmpresa.Entidades", "AppEmpresa.Entidades\AppEmpresa.Entidades.csproj", "{246DA93A-534F-4645-9917-4837B6ADC9B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppEmpresa.API", "AppEmpresa.API\AppEmpresa.API.csproj", "{8EE871A9-8AA2-4152-AC03-C52D3628CECE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppEmpresa.API", "AppEmpresa.API\AppEmpresa.API.csproj", "{8EE871A9-8AA2-4152-AC03-C52D3628CECE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppEmpresa.WEB.MVC", "AppEmpresa.WEB.MVC\AppEmpresa.WEB.MVC.csproj", "{3EC2B7F2-4D77-4F53-AC3E-19AB34206132}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppEmpresa.ConsumeAPI", "AppEmpresa.ConsumeAPI\AppEmpresa.ConsumeAPI.csproj", "{229ACE72-CF20-4FBA-9F2B-1E2D51A105BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{8EE871A9-8AA2-4152-AC03-C52D3628CECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EE871A9-8AA2-4152-AC03-C52D3628CECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EE871A9-8AA2-4152-AC03-C52D3628CECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EC2B7F2-4D77-4F53-AC3E-19AB34206132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC2B7F2-4D77-4F53-AC3E-19AB34206132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC2B7F2-4D77-4F53-AC3E-19AB34206132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC2B7F2-4D77-4F53-AC3E-19AB34206132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229ACE72-CF20-4FBA-9F2B-1E2D51A105BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229ACE72-CF20-4FBA-9F2B-1E2D51A105BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229ACE72-CF20-4FBA-9F2B-1E2D51A105BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229ACE72-CF20-4FBA-9F2B-1E2D51A105BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

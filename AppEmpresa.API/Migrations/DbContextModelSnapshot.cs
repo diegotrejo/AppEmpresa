@@ -71,10 +71,10 @@ namespace AppEmpresa.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CargoId")
+                    b.Property<int>("CargoId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("DepartamentoId")
+                    b.Property<int>("DepartamentoId")
                         .HasColumnType("int");
 
                     b.Property<string>("Direcrion")
@@ -82,13 +82,6 @@ namespace AppEmpresa.API.Migrations
 
                     b.Property<DateTime?>("FechaNacimiento")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("IdCargo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IdDepartamento")
-                        .HasColumnType("int");
 
                     b.Property<string>("Nombres")
                         .IsRequired()
@@ -110,11 +103,15 @@ namespace AppEmpresa.API.Migrations
                 {
                     b.HasOne("AppEmpresa.Entidades.Cargo", "Cargo")
                         .WithMany("EmpleadoList")
-                        .HasForeignKey("CargoId");
+                        .HasForeignKey("CargoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("AppEmpresa.Entidades.Departamento", "Departamento")
                         .WithMany("Empleados")
-                        .HasForeignKey("DepartamentoId");
+                        .HasForeignKey("DepartamentoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Cargo");
 

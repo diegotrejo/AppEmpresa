@@ -49,10 +49,8 @@ namespace AppEmpresa.API.Migrations
                     Direcrion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Salario = table.Column<double>(type: "float", nullable: false),
-                    IdCargo = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CargoId = table.Column<int>(type: "int", nullable: true),
-                    IdDepartamento = table.Column<int>(type: "int", nullable: false),
-                    DepartamentoId = table.Column<int>(type: "int", nullable: true)
+                    CargoId = table.Column<int>(type: "int", nullable: false),
+                    DepartamentoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -61,12 +59,14 @@ namespace AppEmpresa.API.Migrations
                         name: "FK_Empleados_Cargos_CargoId",
                         column: x => x.CargoId,
                         principalTable: "Cargos",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Empleados_Departamentos_DepartamentoId",
                         column: x => x.DepartamentoId,
                         principalTable: "Departamentos",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

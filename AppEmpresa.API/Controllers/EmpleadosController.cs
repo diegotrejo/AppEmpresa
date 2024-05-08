@@ -31,7 +31,12 @@ namespace AppEmpresa.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Empleado>> GetEmpleado(int id)
         {
-            var empleado = await _context.Empleados.FindAsync(id);
+            var empleado = await _context
+                .Empleados
+                .Include(e => e.Cargo)
+                .Include(e => e.Departamento)
+                .Where(e => e.Id == id)
+                .FirstOrDefaultAsync();
 
             if (empleado == null)
             {
