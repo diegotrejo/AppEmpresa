@@ -45,15 +45,22 @@ namespace AppEmpresa.ConsumeAPI
 
         public static T Read_ById(string urlApi, int id) 
         {
-            using (HttpClient client = new HttpClient())
+            try
             {
-                urlApi = urlApi + "/" + id;
-                var response = client.GetStringAsync(urlApi);
-                response.Wait();
+                using (HttpClient client = new HttpClient())
+                {
+                    urlApi = urlApi + "/" + id;
+                    var response = client.GetStringAsync(urlApi);
+                    response.Wait();
 
-                var json = response.Result;
-                var result = JsonConvert.DeserializeObject<T>(json);
-                return result;
+                    var json = response.Result;
+                    var result = JsonConvert.DeserializeObject<T>(json);
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                return default;
             }
         }
 
